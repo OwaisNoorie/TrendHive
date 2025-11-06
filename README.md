@@ -163,5 +163,3 @@ B.Tech in Information Technology
 
 ---
 
-## 📜 License
-MIT License © 2025 — Owais Noorie
