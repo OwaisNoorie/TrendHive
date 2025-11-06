@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TrendHive • Cart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <div class="brand">TrendHive</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="/admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Your Cart</h1>
+    <div id="cart"></div>
+
+    <h2>Checkout</h2>
+    <form id="checkout-form" class="card">
+      <input type="text" id="name" placeholder="Full name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="address" placeholder="Address" required></textarea>
+      <button type="submit">Place Order</button>
+    </form>
+  </main>
+
+  <footer class="container small">© <span id="year"></span> TrendHive</footer>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    window.renderCart && window.renderCart();
+  </script>
+</body>
+</html>
